@@ -2,14 +2,70 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
 }
 
 html,body{
     height: 100%;
 }
 
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.clear{
+    clear: both;
+}
+
 header{
-    width: 100%;
-    height:90vh;
-    background-image: url('../imagens/capa.png');
+ width: 100%;
+ background-size: cover;
+ padding: 40px 2%;
+ height: 90vh;
+ max-height: 700px;
+ background-position: center;
+ background-image: url('../imagens/capa.png');
+ }
+
+header nav{
+    float: right;
+}
+
+header .logo{
+    float: left;
+    width: 160px;
+    height: 40px;
+    background-color: aliceblue;
+}
+
+header nav li{
+    float: left;
+    margin: 0 20px;
+}
+
+header nav ul{
+    list-style-type: none;
+}
+header li  a{
+    color: white;
+    text-decoration: none;
+}
+
+.chamada1{
+    /*max-width: 600px;*/
+    float: right;
+    margin: 140px 150px;
+}
+
+.chamada1 h2{
+    font-size: 40px;
+    color: white;
+    font-weight: normal;
+}
+
+.chamada1 p{
+    font-size: 15px;
+    color: white;
+    margin-top: 10px;
 }
