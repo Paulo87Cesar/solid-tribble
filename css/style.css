@@ -21,7 +21,7 @@ html,body{
 header{
  width: 100%;
  background-size: cover;
- min-height: 800px; /* concertou o conflito que quebrava o dispositivo*/
+ min-height: 800px;  /*concertou o conflito que quebrava o dispositivo*/
  padding: 40px 2%;
  height: 90vh;
  /*max-height: 700px;*/
@@ -55,11 +55,11 @@ nav.mobile-menu ul li{
 }
 
 nav.mobile-menu ul li:hover{
-    background-color: rgb(230, 230, 230);
+    background-color: rgba(230, 230, 230, 0.5);
 }
 
 nav.mobile-menu ul{
-    opacity: 0;
+    opacity: 0.5;
     transition: 1s;
     background-color: white;
     position: absolute;
@@ -75,10 +75,13 @@ nav.mobile-menu ul li a{
 }
 
 header .logo{
+    background-image: url(../imagens/logo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     float: left;
-    width: 160px;
-    height: 40px;
-    background-color: aliceblue;
+    width: 150px;
+    height: 75px;
 }
 
 header nav.desktop-menu li{
@@ -221,9 +224,10 @@ section.sessao1 .container{
 } 
 
 .wraper-part1{
+
     max-width: 600px;
     float: right;
-    padding-right: 30px;
+    padding: 0 30px;
  }
 
 .parte1 h2{
@@ -235,7 +239,7 @@ section.sessao1 .container{
 .parte1 p{
     font-size: 15px;
     margin-top: 10px;
-    line-height: 23px;
+    line-height: 33px;
 }
 
 .parte2 {
@@ -247,13 +251,12 @@ section.sessao1 .container{
 
 .sobre-autor{
     float: left;
-    max-width: 600px;
+    max-width: 780px; /*erro 600px*/
     padding-left: 30px;
 }
 
 .wraper2{
-
-    float: left;
+   float: left;
 }
 
 .titulo-auto{ 
@@ -277,13 +280,15 @@ section.sessao1 .container{
 }
 
 .titulo-autor .foto{
+    background-image: url(../imagens/autor.png);
+    background-size: 100% 100%;
     float: left;
-    width: 40px;
-    height: 40px;
-    background-color: #ff703d;
-    border-radius: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
     position: relative;
-    top: -4px;
+    top: -12px;
+    left: 10px;
 }
 
 .texto-autor{
@@ -295,6 +300,7 @@ section.sessao1 .container{
 .texto-autor p{
    color: rgb(20, 62, 62);
    font-size: 15px;
+   max-width: 400px; /* solução do texto-autor */ 
 }
 
 .slider-bullets{
@@ -314,6 +320,123 @@ section.sessao1 .container{
     background-color: cadetblue;
     cursor: pointer;
 }
+/* Aqui estou começando a sessao 4*/
+section.sessao4{
+    background-color: #472663;
+    padding:  100px 0;  
+}
+
+.form{
+    float: left;
+    width: 50%;
+    color: white;
+    padding-left: 10px;
+    /* margin-left: 50px;*/
+}
+
+
+.form form{
+    margin-top: 15px;
+} 
+
+.form h2{
+    font-size: 23px;
+    font-weight:  300;
+}
+
+.form p{
+    font-size: 15px;
+    font-weight: 300;
+    max-width: 400px;
+    padding: 10px;
+}
+
+.form form input[type=text]{
+    width: 90%;
+    max-width: 480px;
+    margin-top: 5px;
+    height: 58px;
+    margin-top: 8px;
+    padding-left: 8px;
+    line-height: 58px;
+    border: 3px solid rgb(200,200, 200);
+}
+
+.form form textarea{
+    width: 90%;
+    max-width: 480px;
+    margin-top: 8px;
+    padding: 15px;
+    height: 160px; ;
+    border: 3px solid rgb(200,200, 200);
+}
+ 
+/* input submit por padrão tem borda */
+.form form input[type=submit]{ 
+    background-color: #ff703d;
+    width: 165px;
+    height: 44px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 30px;
+    border: 0;
+}
+.map-wraper{
+    padding: 0 10px;
+    float: left;
+    width: 50%;
+    color: white;
+}
+
+.map-wraper h2{
+    font-size: 23px;
+    font-weight: 300;
+}
+
+.map-wraper2{
+    padding-top: 100%;
+    width: 100%;  
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.map-wraper3{
+    margin-top: 10px;
+    width: 100%;
+    max-width: 480px;  
+    position: relative;
+}
+
+.map{
+    left: 0;
+    top: 0;
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: 100%;
+    border: 5px solid rgb(200, 200, 200);
+}
+
+footer{
+    padding: 40px 2%;
+    background: #192123;
+    color: white;
+}
+
+footer p:nth-of-type(1){
+    float: left;
+    font-size: 14px;
+}
+
+footer p:nth-of-type(2){
+    float: right;
+    font-size: 14px;
+}
+      /*    * fim sessao 4     */
+
 
  @media screen and (max-width: 830px){ 
     
@@ -342,12 +465,20 @@ section.sessao1 .container{
 
  @media screen and (max-width: 768px) {
 
+   header .logo{
+       position: relative; 
+       top: -40px;
+       width: 120px;
+       height: 100px; 
+    }
+
     nav.desktop-menu{
         display: none;
     }
     
     nav.mobile-menu{
         display: block;
+
     }
 
     .chamada1{
@@ -394,7 +525,7 @@ section.sessao1 .container{
         display: inline-block;
     }
     .divice-sessao1{
-        display: none; /* somem a imagem dos dispositivos */
+        display: none; /* some a imagem dos dispositivos */
     }
     .btn1-texto{
         display: inline-block;
@@ -412,5 +543,76 @@ section.sessao1 .container{
     .sessao2{
         padding: 40px 2%;
      }
+
+    section.sessao4 .container{
+        text-align: center;
+     }
+
+    .form p{
+        display: inline-block; /* referencia linha 347 */
+        float: none;
+    }
+
+    .form{
+        float: none;
+        width: 100%;
+    }
+
+    .map-wraper{
+        float: none;
+        width: 100%;
+        padding: 0 4%;
+        margin-top: 40px;
+   }  
+
+   .map-wraper2{
+    padding-top: 0;
+    height: 100%;
+    width: 100%;  
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.map-wraper3{
+    display: inline-block; /* centraliza */
+    margin-top: 10px;
+    width: 80%;
+    padding-top: 80%;
+    max-width: none;
+    position: relative;
+}
+
+
  }
+ 
+ @media screen and (max-width: 580px) {
+        .parte1{
+            width: 100%;
+            padding: 40px 0;
+        }
+
+        .parte2{
+            width: 100%;
+            padding: 40px 0;
+        }
+
+        .sessao2 img{
+            top: 16px;
+            margin-top: 20px;
+        }
+        
+footer{
+    text-align: center;
+}
+
+footer p:nth-of-type(1){
+    float: none;
+}
+
+footer p:nth-of-type(2){
+    float: none;
+    margin-top: 8px;
+}
+ }      
 
